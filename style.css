@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --primary-text-color :#183b56;
+    --secondary-text-color:#577592;
+    --accent-color:#2294ed;
+    --accent-color-dark:#1d69a3;
+}
+body{
+    font-family: "poppins", "sans-serif";
+    color:var(--primary-text-color);
+}
+p{
+    font-family: "poppins", "sans-serif";
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+a{
+    text-decoration: none;
+
+}
+ul{
+    list-style: none;
+}
+.flex{
+display: flex;
+align-items: center;
+}
+.container{
+    max-width: 1180px;
+    margin-inline:auto;
+    overflow: hidden;
+}
+nav{
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+.main-nav{
+    justify-content: space-between;
+    padding-block: 8px;
+}
+.company-logo img{
+    width: 120px;
+}
+.nav-links ul{
+    gap: 16px;
+}
+.hover-link{
+    cursor: pointer;
+}
+.hover-link:hover{
+    color: var(--secondary-text-color);
+
+}
+.hover-link:active{
+    color: red;
+}
+.search-bar{
+    height: 32px;
+    gap: 8px;
+}
+.news-input{
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "poppins", "sans-serif";
+}
+.search-button{
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    font-family: "poppins", "sans-serif";
+}
+.search-button:hover{
+    color: var(--accent-color-dark);
+}
+main{
+    padding-block: 20px;
+    margin-top: 130px;
+    margin-left: 50px;
+}
+.cards-container{
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: center;
+}
+.card{
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3 ease;
+}
+.card:hover{
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+.card-header img{
+    width: 100%;
+    height: 180px;
+}
+.card-content{
+    padding: 12px;
+}
+.news-source{
+    margin-block: 12px;
+}
+.nav-item.active{
+    color: var(--accent-color);
+}
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .nav-links ul.active {
+        display: flex;
+    }
+
+    .nav-links ul li {
+        padding: 10px;
+        border-bottom: 1px solid #555;
+    }
+
+    .company-logo {
+        display: none;
+    }
+}
+/*  media querry for mini phone*/ 
+@media only screen and (max-width: 320px) {
+    .main-nav.container {
+        padding: 0.5rem; /* Kam padding */
+    }
+
+    .nav-links ul li {
+        font-size: 0.8rem; /* Chhota font size */
+    }
+
+    .card {
+        width: calc(100% - 20px); /* Poora screen width */
+        margin: 10px; /* Thoda spacing */
+    }
+
+    .card-content h3 {
+        font-size: 1rem; /* Title size badhaana */
+    }
+
+    .card-content .news-source {
+        font-size: 0.7rem; /* Source size chhota karna */
+    }
+
+    .card-content .news-desc {
+        font-size: 0.8rem; /* Description size chhota karna */
+    }
+}
+/* media query for ipad */
+
